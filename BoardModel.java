@@ -9,7 +9,7 @@ public class BoardModel{
 	
 	public int getTurn()
 	{
-		return turn;
+		return (turn-1);
 	}
 	
 	public void changeTurn()

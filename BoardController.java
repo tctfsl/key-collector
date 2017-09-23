@@ -25,8 +25,8 @@ public class BoardController{
 		((Cell)e.getSource()).setBackground(Color.red);
 		System.out.println("Row: " + btn.getRow() + " Column: " + btn.getColumn());
 		getModel().changeTurn();
-		String q = String.valueOf(getModel().getTurn());
-		System.out.println("Turn: Player"+q );
+	
+		System.out.println("Turn: Player"+ getModel().getTurn());
 		}
 	}
 }
