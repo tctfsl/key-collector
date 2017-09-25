@@ -15,7 +15,7 @@ public class KeyNote extends Piece {
 		{
 			for(int j=(playerColumn-2); j<(playerColumn+3); j++)
 			{
-				if(i>=0 && j>=0 && i<=8 && j<=8 && ((Math.abs(i-playerRow)>1) || (Math.abs(j-playerColumn)>1)))
+				if(i>=0 && j>=0 && i<=8 && j<=8 && ((Math.abs(i-playerRow)>1) || (Math.abs(j-playerColumn)>1)) && ((Math.abs(i-playerRow)==Math.abs(j-playerColumn)) || (i==playerRow || j==playerColumn)))
 				{
 					if(bttn[i][j].isOccupied == false)
 					{
