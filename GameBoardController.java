@@ -76,7 +76,11 @@ public class GameBoardController {
 	  {
 		  System.out.println("Key here");
 		  ((PlayerPiece)players.get(theModel.getTurn() - 1)).setNewestPiece(btn.getPiece());
+		  
+		InfoBoardController.updateModel((theModel.getTurn()-1), new ImageIcon(btn.getPiece().getPath()));
+		InfoBoardController.updatePlayerInfo((theModel.getTurn()-1));
 		  btn.removePiece();
+	
 		  //[ArrayList] Set Player Piece
           btn.setPiece(players.get(theModel.getTurn() - 1));
           //[ArrayList] Set New Piece Location

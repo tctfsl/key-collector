@@ -59,7 +59,7 @@ public class InfoBoardView extends JPanel {
     }
     
     for(int j = 0; j < avatar.length; j++) {
-      pieceList[j] = new JPanel();
+      pieceList[j] = new JPanel(new FlowLayout(FlowLayout.LEFT));
       
       pieceListScroll[j] = new JScrollPane(pieceList[j]);
       pieceListScroll[j].setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
@@ -93,7 +93,7 @@ public class InfoBoardView extends JPanel {
       button.setPreferredSize(new Dimension(45, 45));
       
       if (i == 0) {
-        button.setBackground(Color.BLUE);
+        button.setBackground(Color.WHITE);
       }
       else {
         button.setEnabled(false);
