@@ -53,6 +53,13 @@ public class GameBoardController {
 
       //I got the Source. No Ketchup.
       Cell btn = (Cell) e.getSource();
+	  
+	  if(btn.getPiece() instanceof Chest)
+	  {
+		  String victoryMsg = "Congratulations! " + players.get(theModel.getTurn() - 1).getName() + " has unlocked the treasure chest! VICTORYYYY";
+		  JOptionPane.showMessageDialog(null, victoryMsg);
+		  System.exit(0);
+	  }
       
       if (btn.getPiece() == null) {
         System.out.println("No Piece Here");
