@@ -23,14 +23,14 @@ public class InfoBoardView extends JPanel {
   
   //Class Constructor
   public InfoBoardView() {
-    setLayout(new FlowLayout());
+    setLayout(new FlowLayout());//player info panel setlayout
     setPreferredSize(new Dimension(360, 450));
     
     //Prepare the border styling for both Game Information and Player Information panels.
     loweredetch = BorderFactory.createEtchedBorder(EtchedBorder.LOWERED);
     
     //Prepare the title and the border for Game Information panel.
-    title1 = "Game Information";
+    title1 = "Game Information";// game information panel
     titleWrapper1 = BorderFactory.createTitledBorder(loweredetch, title1);
     
     //Set up the Game Information panel.
@@ -58,10 +58,12 @@ public class InfoBoardView extends JPanel {
     java.net.URL imageURL;
     ImageIcon image;
     
+	//Prepare the player avatar
     for(int m = 0; m < 4; m++) {
       players[m] = PieceFactory.getPiece(("Player " + String.valueOf(m + 1)));
     }
     
+	//Set up the player information panel
     for(int i = 0; i < 4; i++) {
       avatar[i] = new JPanel();
       avatar[i].setPreferredSize(new Dimension(75, 75));
@@ -99,12 +101,14 @@ public class InfoBoardView extends JPanel {
   }
   
   
+  //Update the game infomation panel
   public void updateTurnIndicator(int turn) {
     gameInfo.removeAll();
     turnIndicator = new JLabel("Turn: Player " + String.valueOf(turn));
     gameInfo.add(turnIndicator);
   }
   
+  //Update the player information panel
   public void updatePieceOwned(int turn, InfoBoardModel theModel) {
     ImageIcon image;
     JButton button;

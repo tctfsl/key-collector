@@ -2,11 +2,13 @@ import java.util.ArrayList;
 import java.util.Vector;
 
 public class Donkey extends Piece {
+	//Constructor
   public Donkey(String name, String path, int x, int y) {
     super(name, path, x, y);
   }
   
   public Vector<Vector<Integer>> calculateMoves(Cell[][] bttn, int playerRow, int playerColumn, ArrayList<Piece> keysHeld) {
+	  //Prepare list possible moves
     Vector<Integer> rowList = new Vector<Integer>(1, 1);
     Vector<Integer> columnList = new Vector<Integer>(1, 1);
     

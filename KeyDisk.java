@@ -2,11 +2,13 @@ import java.util.ArrayList;
 import java.util.Vector;
 
 public class KeyDisk extends Piece {
+	//Constructor
   public KeyDisk(String name, String path, int x, int y) {
     super(name, path, x, y);
   }
   
   public Vector<Vector<Integer>> calculateMoves(Cell[][] bttn, int playerRow, int playerColumn, ArrayList<Piece> keysHeld) {
+	  //Prepare list of possible moves
     Vector<Integer> rowList = new Vector<Integer>(1, 1);
     Vector<Integer> columnList = new Vector<Integer>(1, 1);
     
