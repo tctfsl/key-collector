@@ -38,16 +38,17 @@ public class PlayerPiece extends Piece {
 	{
 		boolean held = true;
 		
-		if(keysHeld.size()>=1)
-		{
+		//if(keysHeld.size()>=1)
+		//{
 			for(int i=0; i<keysHeld.size(); i++)
 			{
-				if((this.keysHeld.get(i).getName()) == (piece.getName()));
+				if((keysHeld.get(i).getName()).equals(piece.getName()))
 				{
 					held = false;
 				}
 			}
-		}
+		//}
+		
 		return held;
 	}
 	

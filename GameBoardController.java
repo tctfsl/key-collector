@@ -106,6 +106,7 @@ public class GameBoardController {
 		  {
 			  ((PlayerPiece)players.get(theModel.getTurn() - 1)).addPiece(btn.getPiece());
 			  System.out.println("Added key");
+			  System.out.println(theModel.getTurn() - 1);
 			  System.out.println(((PlayerPiece)players.get(theModel.getTurn() - 1)).getKeySize());
 		  }
 		  System.out.println(((PlayerPiece)players.get(theModel.getTurn() - 1)).getNewestPiece().getName());
